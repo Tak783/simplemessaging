@@ -3,6 +3,13 @@
    version = "1.0">
    <Group
       location = "container:"
+      name = "Core Shared Components">
+      <FileRef
+         location = "group:Core Shared Components/CoreNetworking">
+      </FileRef>
+   </Group>
+   <Group
+      location = "container:"
       name = "Core Layer">
       <FileRef
          location = "group:Core Layer/CoreTesting">
