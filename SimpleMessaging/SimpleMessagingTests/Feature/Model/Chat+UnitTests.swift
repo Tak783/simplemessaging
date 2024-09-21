@@ -17,6 +17,9 @@ final class ChatUnitTests: XCTest {
     }
     
     func test_equatable_retunsFalseIfIDsAreNotTheSame() {
-        
+        let chatOne = ChatStub.stubbedChatOne()
+        let chatTwo = ChatStub.stubbedChatTwo()
+    
+        XCTAssertEqual(chatOne == chatOne, false)
     }
 }
