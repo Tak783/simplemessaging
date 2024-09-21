@@ -18,9 +18,12 @@ protocol ChatFeedViewModelUnitTestsSpec {
 
 typealias ChatFeedViewModelUnitTest = XCTestCase & ChatFeedViewModelUnitTestsSpec
 
-final class MovieCarouselViewModelUnitTests: ChatFeedViewModelUnitTest {
+final class ChatFeedViewModelUnitTests: ChatFeedViewModelUnitTest {
     func test_init_defaultInitialisesWithExpectedTitle() {
+        let expectedTitle = "Simple Chat"
+        let sut = makeSUT(title: expectedTitle)
         
+        XCTAssertEqual(sut.title, expectedTitle)
     }
     
     func test_init_defaultInitialisesWithLoadedStateWithEmptyChatFeed() {
@@ -34,4 +37,12 @@ final class MovieCarouselViewModelUnitTests: ChatFeedViewModelUnitTest {
     func test_loadFeed_setsViewModelStateToLoading() {
         
     }
+    
+    func makeSUT(
+        title: String = "Chats",
+        service: ChatServiceable = StubChatService()
+    ) -> ChatFeedViewModel {
+        return ChatFeedViewModel(title: title, service: service)
+    }
 }
+
