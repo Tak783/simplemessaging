@@ -20,6 +20,7 @@
 		8BD0D9CD2C9F51BB00A4F41D /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD0D9CC2C9F51BB00A4F41D /* Message.swift */; };
 		8BD0D9D22C9F527C00A4F41D /* Chat.json in Resources */ = {isa = PBXBuildFile; fileRef = 8BD0D9D12C9F527C00A4F41D /* Chat.json */; };
 		8BD0D9D42C9F52AF00A4F41D /* LocalJSONChatService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD0D9D32C9F52AF00A4F41D /* LocalJSONChatService.swift */; };
+		8BD0D9D72C9F533E00A4F41D /* ChatServiceable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD0D9D62C9F533E00A4F41D /* ChatServiceable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		8BD0D9CC2C9F51BB00A4F41D /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		8BD0D9D12C9F527C00A4F41D /* Chat.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Chat.json; sourceTree = "<group>"; };
 		8BD0D9D32C9F52AF00A4F41D /* LocalJSONChatService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalJSONChatService.swift; sourceTree = "<group>"; };
+		8BD0D9D62C9F533E00A4F41D /* ChatServiceable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatServiceable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -197,8 +199,9 @@
 		8BD0D9CE2C9F51F100A4F41D /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				8BD0D9D92C9F536300A4F41D /* Local */,
+				8BD0D9D82C9F535D00A4F41D /* API */,
 				8BD0D9D02C9F526D00A4F41D /* Resources */,
-				8BD0D9D32C9F52AF00A4F41D /* LocalJSONChatService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -209,6 +212,22 @@
 				8BD0D9D12C9F527C00A4F41D /* Chat.json */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		8BD0D9D82C9F535D00A4F41D /* API */ = {
+			isa = PBXGroup;
+			children = (
+				8BD0D9D62C9F533E00A4F41D /* ChatServiceable.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		8BD0D9D92C9F536300A4F41D /* Local */ = {
+			isa = PBXGroup;
+			children = (
+				8BD0D9D32C9F52AF00A4F41D /* LocalJSONChatService.swift */,
+			);
+			path = Local;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -344,6 +363,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8BD0D9962C9F4E6400A4F41D /* ViewController.swift in Sources */,
+				8BD0D9D72C9F533E00A4F41D /* ChatServiceable.swift in Sources */,
 				8BD0D9C92C9F510D00A4F41D /* Chat.swift in Sources */,
 				8BD0D9CD2C9F51BB00A4F41D /* Message.swift in Sources */,
 				8BD0D9922C9F4E6400A4F41D /* AppDelegate.swift in Sources */,
