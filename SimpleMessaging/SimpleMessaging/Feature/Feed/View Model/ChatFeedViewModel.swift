@@ -17,16 +17,16 @@ protocol ChatFeedViewModelling {
     var onFeedStateChange: Observer<ChatFeedViewModelState>? { get set}
 }
 
-enum ChatFeedViewModelState {
+enum ChatFeedViewModelState: Equatable {
     case loading
     case error
-    case loaded
+    case loaded([Chat])
 }
 
 final class ChatFeedViewModel {
     private (set) var title: String
     private (set) var chats: [Chat] = .init()
-    private (set) var state: ChatFeedViewModelState = .loaded
+    private (set) var state: ChatFeedViewModelState = .error
 
     private (set) var service: ChatServiceable
 

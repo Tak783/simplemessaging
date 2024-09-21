@@ -29,6 +29,7 @@
 		8BD0D9ED2C9F596000A4F41D /* StubChatService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD0D9EC2C9F596000A4F41D /* StubChatService.swift */; };
 		8BD0D9F02C9F5B4000A4F41D /* Chat+UnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD0D9EF2C9F5B4000A4F41D /* Chat+UnitTests.swift */; };
 		8BD0D9F42C9F5C7200A4F41D /* ChatStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD0D9F32C9F5C7200A4F41D /* ChatStub.swift */; };
+		8BD0D9F62C9F5E6000A4F41D /* SpyChatFeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD0D9F52C9F5E6000A4F41D /* SpyChatFeed.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +73,7 @@
 		8BD0D9EC2C9F596000A4F41D /* StubChatService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StubChatService.swift; sourceTree = "<group>"; };
 		8BD0D9EF2C9F5B4000A4F41D /* Chat+UnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Chat+UnitTests.swift"; sourceTree = "<group>"; };
 		8BD0D9F32C9F5C7200A4F41D /* ChatStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatStub.swift; sourceTree = "<group>"; };
+		8BD0D9F52C9F5E6000A4F41D /* SpyChatFeed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpyChatFeed.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -303,6 +305,7 @@
 			isa = PBXGroup;
 			children = (
 				8BD0D9EC2C9F596000A4F41D /* StubChatService.swift */,
+				8BD0D9F52C9F5E6000A4F41D /* SpyChatFeed.swift */,
 			);
 			path = "Test Doubles";
 			sourceTree = "<group>";
@@ -477,6 +480,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8BD0D9F62C9F5E6000A4F41D /* SpyChatFeed.swift in Sources */,
 				8BD0D9EA2C9F562D00A4F41D /* ChatFeedViewModelUnitTests.swift in Sources */,
 				8BD0D9F42C9F5C7200A4F41D /* ChatStub.swift in Sources */,
 				8BD0D9F02C9F5B4000A4F41D /* Chat+UnitTests.swift in Sources */,

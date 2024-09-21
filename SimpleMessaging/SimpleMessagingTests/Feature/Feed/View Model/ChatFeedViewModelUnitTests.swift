@@ -10,7 +10,7 @@ import XCTest
 
 protocol ChatFeedViewModelUnitTestsSpec {
     func test_init_initialisesWithExpectedTitle()
-    func test_init_defaultInitialisesWithLoadedState()
+    func test_init_defaultInitialisesWithErrorState()
     func test_init_defaultInitialisesWithEmptyChatFeedModel()
     
     func test_loadFeed_setsViewModelStateToLoading()
@@ -29,10 +29,10 @@ extension ChatFeedViewModelUnitTests {
         XCTAssertEqual(sut.title, expectedTitle)
     }
     
-    func test_init_defaultInitialisesWithLoadedState() {
+    func test_init_defaultInitialisesWithErrorState() {
         let sut = makeSUT()
         
-        XCTAssertEqual(sut.state, .loaded)
+        XCTAssertEqual(sut.state, ChatFeedViewModelState.error)
     }
     
     func test_init_defaultInitialisesWithEmptyChatFeedModel() {
