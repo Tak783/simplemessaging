@@ -5,6 +5,9 @@
       location = "container:"
       name = "Core Layer">
       <FileRef
+         location = "group:Core Layer/CoreTesting">
+      </FileRef>
+      <FileRef
          location = "group:Core Layer/CoreFoundational">
       </FileRef>
    </Group>
