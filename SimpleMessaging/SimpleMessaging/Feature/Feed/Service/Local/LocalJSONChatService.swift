@@ -21,7 +21,7 @@ final class LocalJSONChatService: ChatServiceable {
         Bundle(for: self)
     }
     
-    func fetchData(from url: URL) async -> Result<[Chat], Error> {
+    func fetchData() async -> Result<[Chat], Error> {
         let mockData = MockServer.loadLocalJSON(
             FileName.chats.value,
             fromBundle: .main

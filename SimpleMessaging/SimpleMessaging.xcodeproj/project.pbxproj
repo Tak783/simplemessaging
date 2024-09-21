@@ -26,6 +26,7 @@
 		8BD0D9E22C9F543500A4F41D /* CoreTesting in Frameworks */ = {isa = PBXBuildFile; productRef = 8BD0D9E12C9F543500A4F41D /* CoreTesting */; };
 		8BD0D9E52C9F560700A4F41D /* ChatFeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD0D9E42C9F560700A4F41D /* ChatFeedViewModel.swift */; };
 		8BD0D9EA2C9F562D00A4F41D /* ChatFeedViewModelUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD0D9E92C9F562D00A4F41D /* ChatFeedViewModelUnitTests.swift */; };
+		8BD0D9ED2C9F596000A4F41D /* StubChatService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD0D9EC2C9F596000A4F41D /* StubChatService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +67,7 @@
 		8BD0D9D62C9F533E00A4F41D /* ChatServiceable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatServiceable.swift; sourceTree = "<group>"; };
 		8BD0D9E42C9F560700A4F41D /* ChatFeedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatFeedViewModel.swift; sourceTree = "<group>"; };
 		8BD0D9E92C9F562D00A4F41D /* ChatFeedViewModelUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatFeedViewModelUnitTests.swift; sourceTree = "<group>"; };
+		8BD0D9EC2C9F596000A4F41D /* StubChatService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StubChatService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -261,6 +263,7 @@
 		8BD0D9E62C9F560E00A4F41D /* Feature */ = {
 			isa = PBXGroup;
 			children = (
+				8BD0D9EB2C9F595500A4F41D /* Model */,
 				8BD0D9E72C9F561400A4F41D /* Feed */,
 			);
 			path = Feature;
@@ -280,6 +283,14 @@
 				8BD0D9E92C9F562D00A4F41D /* ChatFeedViewModelUnitTests.swift */,
 			);
 			path = "View Model";
+			sourceTree = "<group>";
+		};
+		8BD0D9EB2C9F595500A4F41D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8BD0D9EC2C9F596000A4F41D /* StubChatService.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -437,6 +448,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8BD0D9EA2C9F562D00A4F41D /* ChatFeedViewModelUnitTests.swift in Sources */,
+				8BD0D9ED2C9F596000A4F41D /* StubChatService.swift in Sources */,
 				8BD0D9A92C9F4E6600A4F41D /* SimpleMessagingTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

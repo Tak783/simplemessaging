@@ -8,5 +8,5 @@
 import Foundation
 
 protocol ChatServiceable {
-    func fetchData(from url: URL) async -> Result<[Chat], Error>
+    func fetchData() async -> Result<[Chat], Error>
 }
