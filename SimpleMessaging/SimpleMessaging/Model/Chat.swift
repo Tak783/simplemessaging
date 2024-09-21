@@ -20,3 +20,10 @@ struct Chat: Decodable, Identifiable {
         case messages
     }
 }
+
+// MARK: - Equatable
+extension Chat: Equatable {
+    static func == (lhs: Chat, rhs: Chat) -> Bool {
+        lhs.id == rhs.id
+    }
+}

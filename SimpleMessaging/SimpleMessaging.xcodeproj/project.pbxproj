@@ -27,6 +27,8 @@
 		8BD0D9E52C9F560700A4F41D /* ChatFeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD0D9E42C9F560700A4F41D /* ChatFeedViewModel.swift */; };
 		8BD0D9EA2C9F562D00A4F41D /* ChatFeedViewModelUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD0D9E92C9F562D00A4F41D /* ChatFeedViewModelUnitTests.swift */; };
 		8BD0D9ED2C9F596000A4F41D /* StubChatService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD0D9EC2C9F596000A4F41D /* StubChatService.swift */; };
+		8BD0D9F02C9F5B4000A4F41D /* Chat+UnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD0D9EF2C9F5B4000A4F41D /* Chat+UnitTests.swift */; };
+		8BD0D9F42C9F5C7200A4F41D /* ChatStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD0D9F32C9F5C7200A4F41D /* ChatStub.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +70,8 @@
 		8BD0D9E42C9F560700A4F41D /* ChatFeedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatFeedViewModel.swift; sourceTree = "<group>"; };
 		8BD0D9E92C9F562D00A4F41D /* ChatFeedViewModelUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatFeedViewModelUnitTests.swift; sourceTree = "<group>"; };
 		8BD0D9EC2C9F596000A4F41D /* StubChatService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StubChatService.swift; sourceTree = "<group>"; };
+		8BD0D9EF2C9F5B4000A4F41D /* Chat+UnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Chat+UnitTests.swift"; sourceTree = "<group>"; };
+		8BD0D9F32C9F5C7200A4F41D /* ChatStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatStub.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -263,6 +267,7 @@
 		8BD0D9E62C9F560E00A4F41D /* Feature */ = {
 			isa = PBXGroup;
 			children = (
+				8BD0D9F12C9F5C6800A4F41D /* Test Doubles */,
 				8BD0D9EB2C9F595500A4F41D /* Model */,
 				8BD0D9E72C9F561400A4F41D /* Feed */,
 			);
@@ -272,6 +277,7 @@
 		8BD0D9E72C9F561400A4F41D /* Feed */ = {
 			isa = PBXGroup;
 			children = (
+				8BD0D9EE2C9F5B2C00A4F41D /* Test Doubles */,
 				8BD0D9E82C9F561800A4F41D /* View Model */,
 			);
 			path = Feed;
@@ -288,7 +294,31 @@
 		8BD0D9EB2C9F595500A4F41D /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				8BD0D9EF2C9F5B4000A4F41D /* Chat+UnitTests.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		8BD0D9EE2C9F5B2C00A4F41D /* Test Doubles */ = {
+			isa = PBXGroup;
+			children = (
 				8BD0D9EC2C9F596000A4F41D /* StubChatService.swift */,
+			);
+			path = "Test Doubles";
+			sourceTree = "<group>";
+		};
+		8BD0D9F12C9F5C6800A4F41D /* Test Doubles */ = {
+			isa = PBXGroup;
+			children = (
+				8BD0D9F22C9F5C6D00A4F41D /* Model */,
+			);
+			path = "Test Doubles";
+			sourceTree = "<group>";
+		};
+		8BD0D9F22C9F5C6D00A4F41D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8BD0D9F32C9F5C7200A4F41D /* ChatStub.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -448,6 +478,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				8BD0D9EA2C9F562D00A4F41D /* ChatFeedViewModelUnitTests.swift in Sources */,
+				8BD0D9F42C9F5C7200A4F41D /* ChatStub.swift in Sources */,
+				8BD0D9F02C9F5B4000A4F41D /* Chat+UnitTests.swift in Sources */,
 				8BD0D9ED2C9F596000A4F41D /* StubChatService.swift in Sources */,
 				8BD0D9A92C9F4E6600A4F41D /* SimpleMessagingTests.swift in Sources */,
 			);

@@ -27,7 +27,10 @@ final class ChatFeedViewModelUnitTests: ChatFeedViewModelUnitTest {
     }
     
     func test_init_defaultInitialisesWithLoadedStateWithEmptyChatFeed() {
+        let sut = makeSUT()
         
+        XCTAssertEqual(sut.chats, .init())
+        XCTAssertEqual(sut.state, .loaded)
     }
     
     func test_init_defaultInitialisesWithEmptyChatFeedModel() {
@@ -42,7 +45,7 @@ final class ChatFeedViewModelUnitTests: ChatFeedViewModelUnitTest {
         title: String = "Chats",
         service: ChatServiceable = StubChatService()
     ) -> ChatFeedViewModel {
-        return ChatFeedViewModel(title: title, service: service)
+        return ChatFeedViewModel(title: title, service: service, chats: <#[Chat]#>)
     }
 }
 

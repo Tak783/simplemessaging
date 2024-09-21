@@ -10,6 +10,8 @@ import CoreFoundational
 
 protocol ChatFeedViewModelling {
     var title: String { get }
+    var chats: [Chat] { get }
+    var state: ChatFeedViewModelState { get }
     var service: ChatServiceable { get }
     
     var onFeedStateChange: Observer<ChatFeedViewModelState>? { get set}
@@ -18,24 +20,34 @@ protocol ChatFeedViewModelling {
 enum ChatFeedViewModelState {
     case loading
     case error
-    case loaded(Chat)
+    case loaded
 }
 
 final class ChatFeedViewModel {
-    var onFeedStateChange: Observer<ChatFeedViewModelState>?
-
     private (set) var title: String
+    private (set) var chats: [Chat]
+    private (set) var state: ChatFeedViewModelState
+
     private (set) var service: ChatServiceable
 
-    init(title: String, service: ChatServiceable) {
+    var onFeedStateChange: Observer<ChatFeedViewModelState>?
+
+    init(
+        title: String, 
+        service: ChatServiceable,
+        chats: [Chat] = [],
+        state: ChatFeedViewModelState = .loaded
+    ) {
         self.title = title
         self.service = service
+        self.chats = chats
+        self.state = state
     }
 }
 
 // MARK: - ChatFeedViewModelling
 extension ChatFeedViewModel: ChatFeedViewModelling {
-    public func loadFeed() {
+    func loadFeed() {
         
     }
 }
