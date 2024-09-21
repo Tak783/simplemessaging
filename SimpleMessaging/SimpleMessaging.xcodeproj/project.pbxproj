@@ -18,7 +18,7 @@
 		8BD0D9B52C9F4E6600A4F41D /* SimpleMessagingUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD0D9B42C9F4E6600A4F41D /* SimpleMessagingUITestsLaunchTests.swift */; };
 		8BD0D9C92C9F510D00A4F41D /* Chat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD0D9C82C9F510D00A4F41D /* Chat.swift */; };
 		8BD0D9CD2C9F51BB00A4F41D /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD0D9CC2C9F51BB00A4F41D /* Message.swift */; };
-		8BD0D9D22C9F527C00A4F41D /* Chat.json in Resources */ = {isa = PBXBuildFile; fileRef = 8BD0D9D12C9F527C00A4F41D /* Chat.json */; };
+		8BD0D9D22C9F527C00A4F41D /* Chats.json in Resources */ = {isa = PBXBuildFile; fileRef = 8BD0D9D12C9F527C00A4F41D /* Chats.json */; };
 		8BD0D9D42C9F52AF00A4F41D /* LocalJSONChatService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD0D9D32C9F52AF00A4F41D /* LocalJSONChatService.swift */; };
 		8BD0D9D72C9F533E00A4F41D /* ChatServiceable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD0D9D62C9F533E00A4F41D /* ChatServiceable.swift */; };
 		8BD0D9DC2C9F542700A4F41D /* CoreNetworking in Frameworks */ = {isa = PBXBuildFile; productRef = 8BD0D9DB2C9F542700A4F41D /* CoreNetworking */; };
@@ -59,7 +59,7 @@
 		8BD0D9B42C9F4E6600A4F41D /* SimpleMessagingUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleMessagingUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		8BD0D9C82C9F510D00A4F41D /* Chat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chat.swift; sourceTree = "<group>"; };
 		8BD0D9CC2C9F51BB00A4F41D /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
-		8BD0D9D12C9F527C00A4F41D /* Chat.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Chat.json; sourceTree = "<group>"; };
+		8BD0D9D12C9F527C00A4F41D /* Chats.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Chats.json; sourceTree = "<group>"; };
 		8BD0D9D32C9F52AF00A4F41D /* LocalJSONChatService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalJSONChatService.swift; sourceTree = "<group>"; };
 		8BD0D9D62C9F533E00A4F41D /* ChatServiceable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatServiceable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -216,7 +216,7 @@
 		8BD0D9D02C9F526D00A4F41D /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				8BD0D9D12C9F527C00A4F41D /* Chat.json */,
+				8BD0D9D12C9F527C00A4F41D /* Chats.json */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -356,7 +356,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8BD0D99E2C9F4E6600A4F41D /* LaunchScreen.storyboard in Resources */,
-				8BD0D9D22C9F527C00A4F41D /* Chat.json in Resources */,
+				8BD0D9D22C9F527C00A4F41D /* Chats.json in Resources */,
 				8BD0D99B2C9F4E6600A4F41D /* Assets.xcassets in Resources */,
 				8BD0D9992C9F4E6400A4F41D /* Main.storyboard in Resources */,
 			);
@@ -571,6 +571,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SimpleMessaging/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -598,6 +599,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SimpleMessaging/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

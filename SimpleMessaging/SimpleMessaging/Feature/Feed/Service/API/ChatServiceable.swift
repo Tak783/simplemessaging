@@ -2,11 +2,11 @@
 //  ChatServiceable.swift
 //  SimpleMessaging
 //
-//  Created by Tak on 21/09/2024.
+//  Created by on 21/09/2024.
 //
 
 import Foundation
 
 protocol ChatServiceable {
-    func fetchChats() async throws -> [Chat]
+    func fetchData(from url: URL) async -> Result<[Chat], Error>
 }
