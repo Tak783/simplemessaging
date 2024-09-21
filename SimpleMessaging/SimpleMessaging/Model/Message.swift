@@ -2,7 +2,7 @@
 //  Message.swift
 //  SimpleMessaging
 //
-//  Created by Tak on 21/09/2024.
+//  Created on 21/09/2024.
 //
 
 import Foundation
