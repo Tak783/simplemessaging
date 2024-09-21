@@ -3,6 +3,13 @@
    version = "1.0">
    <Group
       location = "container:"
+      name = "Core Layer">
+      <FileRef
+         location = "group:Core Layer/CoreFoundational">
+      </FileRef>
+   </Group>
+   <Group
+      location = "container:"
       name = "Presentation">
       <FileRef
          location = "group:SimpleMessaging/SimpleMessaging.xcodeproj">
