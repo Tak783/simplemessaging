@@ -5,8 +5,8 @@
 //  Created on 21/09/2024.
 //
 
-import Foundation
 import CoreFoundational
+import Foundation
 
 final class ChatFeedViewModel {
     private (set) var title: String
