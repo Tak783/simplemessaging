@@ -8,21 +8,6 @@
 import Foundation
 import CoreFoundational
 
-protocol ChatFeedViewModelling {
-    var title: String { get }
-    var chats: [Chat] { get }
-    var state: ChatFeedViewModelState { get }
-    var service: ChatServiceable { get }
-    
-    var onFeedStateChange: Observer<ChatFeedViewModelState>? { get set}
-}
-
-enum ChatFeedViewModelState: Equatable {
-    case loading
-    case error
-    case loaded([Chat])
-}
-
 final class ChatFeedViewModel {
     private (set) var title: String
     private (set) var chats: [Chat] = .init()
@@ -51,6 +36,9 @@ extension ChatFeedViewModel: ChatFeedViewModelling {
 // MARK: - Update State
 extension ChatFeedViewModel {
     private func updateState(toState updatedState: ChatFeedViewModelState) {
-        state = updatedState
+        DispatchQueue.main.async {
+            self.state = updatedState
+            self.onFeedStateChange?(updatedState)
+        }
     }
 }
