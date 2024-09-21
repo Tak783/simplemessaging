@@ -9,7 +9,7 @@
 import XCTest
 
 protocol ChatFeedViewModelUnitTestsSpec {
-    func test_init_defaultInitialisesWithExpectedTitle()
+    func test_init_initialisesWithExpectedTitle()
     func test_init_defaultInitialisesWithLoadedState()
     func test_init_defaultInitialisesWithEmptyChatFeedModel()
     
@@ -18,8 +18,11 @@ protocol ChatFeedViewModelUnitTestsSpec {
 
 typealias ChatFeedViewModelUnitTest = XCTestCase & ChatFeedViewModelUnitTestsSpec
 
-final class ChatFeedViewModelUnitTests: ChatFeedViewModelUnitTest {
-    func test_init_defaultInitialisesWithExpectedTitle() {
+final class ChatFeedViewModelUnitTests: ChatFeedViewModelUnitTest {}
+
+// MARK: - Test Init
+extension ChatFeedViewModelUnitTests {
+    func test_init_initialisesWithExpectedTitle() {
         let expectedTitle = "Simple Chat"
         let sut = makeSUT(title: expectedTitle)
         
@@ -37,16 +40,26 @@ final class ChatFeedViewModelUnitTests: ChatFeedViewModelUnitTest {
         
         XCTAssertEqual(sut.chats, .init())
     }
+}
     
+// MARK: - Test Load Feed Init
+extension ChatFeedViewModelUnitTests {
     func test_loadFeed_setsViewModelStateToLoading() {
+        let sut = makeSUT()
         
+        sut.loadFeed()
+        
+        XCTAssertEqual(sut.state, .loading)
     }
-    
+}
+ 
+// MARK: - Make System Under Test
+extension ChatFeedViewModelUnitTests {
     func makeSUT(
         title: String = "Chats",
         service: ChatServiceable = StubChatService()
     ) -> ChatFeedViewModel {
-        return ChatFeedViewModel(title: title, service: service, chats: <#[Chat]#>)
+        return ChatFeedViewModel(title: title, service: service)
     }
 }
 

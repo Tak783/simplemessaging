@@ -25,8 +25,8 @@ enum ChatFeedViewModelState {
 
 final class ChatFeedViewModel {
     private (set) var title: String
-    private (set) var chats: [Chat]
-    private (set) var state: ChatFeedViewModelState
+    private (set) var chats: [Chat] = .init()
+    private (set) var state: ChatFeedViewModelState = .loaded
 
     private (set) var service: ChatServiceable
 
@@ -34,20 +34,23 @@ final class ChatFeedViewModel {
 
     init(
         title: String, 
-        service: ChatServiceable,
-        chats: [Chat] = [],
-        state: ChatFeedViewModelState = .loaded
+        service: ChatServiceable
     ) {
         self.title = title
         self.service = service
-        self.chats = chats
-        self.state = state
     }
 }
 
 // MARK: - ChatFeedViewModelling
 extension ChatFeedViewModel: ChatFeedViewModelling {
     func loadFeed() {
-        
+        updateState(toState: .loading)
+    }
+}
+
+// MARK: - Update State
+extension ChatFeedViewModel {
+    private func updateState(toState updatedState: ChatFeedViewModelState) {
+        state = updatedState
     }
 }
