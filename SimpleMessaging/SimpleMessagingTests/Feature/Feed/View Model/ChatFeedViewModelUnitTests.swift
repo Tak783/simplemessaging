@@ -10,7 +10,7 @@ import XCTest
 
 protocol ChatFeedViewModelUnitTestsSpec {
     func test_init_defaultInitialisesWithExpectedTitle()
-    func test_init_defaultInitialisesWithLoadedStateWithEmptyChatFeed()
+    func test_init_defaultInitialisesWithLoadedState()
     func test_init_defaultInitialisesWithEmptyChatFeedModel()
     
     func test_loadFeed_setsViewModelStateToLoading()
@@ -26,15 +26,16 @@ final class ChatFeedViewModelUnitTests: ChatFeedViewModelUnitTest {
         XCTAssertEqual(sut.title, expectedTitle)
     }
     
-    func test_init_defaultInitialisesWithLoadedStateWithEmptyChatFeed() {
+    func test_init_defaultInitialisesWithLoadedState() {
         let sut = makeSUT()
         
-        XCTAssertEqual(sut.chats, .init())
         XCTAssertEqual(sut.state, .loaded)
     }
     
     func test_init_defaultInitialisesWithEmptyChatFeedModel() {
+        let sut = makeSUT()
         
+        XCTAssertEqual(sut.chats, .init())
     }
     
     func test_loadFeed_setsViewModelStateToLoading() {
