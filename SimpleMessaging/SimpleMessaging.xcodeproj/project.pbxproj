@@ -11,7 +11,6 @@
 		8BD0D9942C9F4E6400A4F41D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD0D9932C9F4E6400A4F41D /* SceneDelegate.swift */; };
 		8BD0D99B2C9F4E6600A4F41D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8BD0D99A2C9F4E6600A4F41D /* Assets.xcassets */; };
 		8BD0D99E2C9F4E6600A4F41D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8BD0D99C2C9F4E6600A4F41D /* LaunchScreen.storyboard */; };
-		8BD0D9A92C9F4E6600A4F41D /* SimpleMessagingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD0D9A82C9F4E6600A4F41D /* SimpleMessagingTests.swift */; };
 		8BD0D9B32C9F4E6600A4F41D /* SimpleMessagingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD0D9B22C9F4E6600A4F41D /* SimpleMessagingUITests.swift */; };
 		8BD0D9B52C9F4E6600A4F41D /* SimpleMessagingUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD0D9B42C9F4E6600A4F41D /* SimpleMessagingUITestsLaunchTests.swift */; };
 		8BD0D9C92C9F510D00A4F41D /* Chat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD0D9C82C9F510D00A4F41D /* Chat.swift */; };
@@ -76,7 +75,6 @@
 		8BD0D99D2C9F4E6600A4F41D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8BD0D99F2C9F4E6600A4F41D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8BD0D9A42C9F4E6600A4F41D /* SimpleMessagingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimpleMessagingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		8BD0D9A82C9F4E6600A4F41D /* SimpleMessagingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleMessagingTests.swift; sourceTree = "<group>"; };
 		8BD0D9AE2C9F4E6600A4F41D /* SimpleMessagingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimpleMessagingUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BD0D9B22C9F4E6600A4F41D /* SimpleMessagingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleMessagingUITests.swift; sourceTree = "<group>"; };
 		8BD0D9B42C9F4E6600A4F41D /* SimpleMessagingUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleMessagingUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -177,8 +175,10 @@
 		8BD0D9A72C9F4E6600A4F41D /* SimpleMessagingTests */ = {
 			isa = PBXGroup;
 			children = (
+				8BD0DA1C2CA1671800A4F41D /* Test Utilities */,
+				8BD0D9F12C9F5C6800A4F41D /* Test Doubles */,
+				8BD0D9EB2C9F595500A4F41D /* Model */,
 				8BD0D9E62C9F560E00A4F41D /* Feature */,
-				8BD0D9A82C9F4E6600A4F41D /* SimpleMessagingTests.swift */,
 			);
 			path = SimpleMessagingTests;
 			sourceTree = "<group>";
@@ -308,9 +308,6 @@
 		8BD0D9E62C9F560E00A4F41D /* Feature */ = {
 			isa = PBXGroup;
 			children = (
-				8BD0DA1C2CA1671800A4F41D /* Test Utilities */,
-				8BD0D9F12C9F5C6800A4F41D /* Test Doubles */,
-				8BD0D9EB2C9F595500A4F41D /* Model */,
 				8BD0D9E72C9F561400A4F41D /* Feed */,
 			);
 			path = Feature;
@@ -697,7 +694,6 @@
 				8BD0DA1B2CA166E300A4F41D /* ChatFeedTableViewCell+DSLHelpers.swift in Sources */,
 				8BD0D9F02C9F5B4000A4F41D /* Chat+UnitTests.swift in Sources */,
 				8BD0D9ED2C9F596000A4F41D /* StubChatService.swift in Sources */,
-				8BD0D9A92C9F4E6600A4F41D /* SimpleMessagingTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

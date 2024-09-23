@@ -23,7 +23,7 @@ extension String {
 
 extension String {
     public var stringByRemovingWhitespaces: String {
-        replacingOccurrences(of: " ", with: "")
+        replacingOccurrences(of: String.space, with: String.empty)
     }
 }
 
