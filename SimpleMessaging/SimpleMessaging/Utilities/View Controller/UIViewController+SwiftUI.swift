@@ -2,7 +2,7 @@
 //  UIViewController+SwiftUI.swift
 //  SimpleMessaging
 //
-//  Created by Tak Mazarura on 23/09/2024.
+//  Created on 23/09/2024.
 //
 
 import UIKit

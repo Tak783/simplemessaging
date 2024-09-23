@@ -48,6 +48,7 @@
 		8BD0DA2C2CA1799000A4F41D /* UIViewController+SwiftUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD0DA2B2CA1799000A4F41D /* UIViewController+SwiftUI.swift */; };
 		8BD0DA2E2CA179DE00A4F41D /* ChatDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD0DA2D2CA179DE00A4F41D /* ChatDetailViewModel.swift */; };
 		8BD0DA312CA1820500A4F41D /* ChatInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD0DA302CA1820500A4F41D /* ChatInputView.swift */; };
+		8BD0DA332CA1829600A4F41D /* ChatFeedViewModelUnitTestsSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD0DA322CA1829600A4F41D /* ChatFeedViewModelUnitTestsSpec.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -110,6 +111,7 @@
 		8BD0DA2B2CA1799000A4F41D /* UIViewController+SwiftUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+SwiftUI.swift"; sourceTree = "<group>"; };
 		8BD0DA2D2CA179DE00A4F41D /* ChatDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatDetailViewModel.swift; sourceTree = "<group>"; };
 		8BD0DA302CA1820500A4F41D /* ChatInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatInputView.swift; sourceTree = "<group>"; };
+		8BD0DA322CA1829600A4F41D /* ChatFeedViewModelUnitTestsSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatFeedViewModelUnitTestsSpec.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -228,10 +230,9 @@
 		8BD0D9C52C9F508D00A4F41D /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				8BD0DA362CA182D300A4F41D /* View Controller */,
 				8BD0DA002C9F615E00A4F41D /* Storyboard */,
 				8BD0D99A2C9F4E6600A4F41D /* Assets.xcassets */,
-				8BD0DA292CA1793100A4F41D /* SwiftUIViewHostingUIViewController.swift */,
-				8BD0DA2B2CA1799000A4F41D /* UIViewController+SwiftUI.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -329,6 +330,7 @@
 			isa = PBXGroup;
 			children = (
 				8BD0D9E92C9F562D00A4F41D /* ChatFeedViewModelUnitTests.swift */,
+				8BD0DA322CA1829600A4F41D /* ChatFeedViewModelUnitTestsSpec.swift */,
 			);
 			path = "View Model";
 			sourceTree = "<group>";
@@ -398,9 +400,8 @@
 		8BD0D9FF2C9F60FF00A4F41D /* Feed */ = {
 			isa = PBXGroup;
 			children = (
+				8BD0DA342CA182B700A4F41D /* Controller */,
 				8BD0DA0D2CA15F8800A4F41D /* Cell */,
-				8BD0DA092CA15DF500A4F41D /* ChatFeed.storyboard */,
-				8BD0DA0B2CA15E0000A4F41D /* ChatFeedViewController.swift */,
 			);
 			path = Feed;
 			sourceTree = "<group>";
@@ -444,8 +445,8 @@
 		8BD0DA182CA1663F00A4F41D /* Detail */ = {
 			isa = PBXGroup;
 			children = (
+				8BD0DA352CA182BF00A4F41D /* Controller */,
 				8BD0DA2F2CA181F600A4F41D /* Supporting Views */,
-				8BD0DA272CA1771B00A4F41D /* ChatDetailViewController.swift */,
 			);
 			path = Detail;
 			sourceTree = "<group>";
@@ -490,6 +491,32 @@
 				8BD0DA302CA1820500A4F41D /* ChatInputView.swift */,
 			);
 			path = "Supporting Views";
+			sourceTree = "<group>";
+		};
+		8BD0DA342CA182B700A4F41D /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				8BD0DA092CA15DF500A4F41D /* ChatFeed.storyboard */,
+				8BD0DA0B2CA15E0000A4F41D /* ChatFeedViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		8BD0DA352CA182BF00A4F41D /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				8BD0DA272CA1771B00A4F41D /* ChatDetailViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		8BD0DA362CA182D300A4F41D /* View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				8BD0DA292CA1793100A4F41D /* SwiftUIViewHostingUIViewController.swift */,
+				8BD0DA2B2CA1799000A4F41D /* UIViewController+SwiftUI.swift */,
+			);
+			path = "View Controller";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -664,6 +691,7 @@
 				8BD0D9F62C9F5E6000A4F41D /* SpyChatFeed.swift in Sources */,
 				8BD0DA212CA1674000A4F41D /* ChatFeedTableViewCellUnitTests.swift in Sources */,
 				8BD0DA1E2CA1672500A4F41D /* UIView+FindChildView.swift in Sources */,
+				8BD0DA332CA1829600A4F41D /* ChatFeedViewModelUnitTestsSpec.swift in Sources */,
 				8BD0D9EA2C9F562D00A4F41D /* ChatFeedViewModelUnitTests.swift in Sources */,
 				8BD0D9F42C9F5C7200A4F41D /* ChatStub.swift in Sources */,
 				8BD0DA1B2CA166E300A4F41D /* ChatFeedTableViewCell+DSLHelpers.swift in Sources */,

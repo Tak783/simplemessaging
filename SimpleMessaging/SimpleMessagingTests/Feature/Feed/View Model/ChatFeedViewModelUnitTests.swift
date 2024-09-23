@@ -8,16 +8,6 @@
 @testable import SimpleMessaging
 import XCTest
 
-protocol ChatFeedViewModelUnitTestsSpec {
-    func test_init_initialisesWithExpectedTitle()
-    func test_init_defaultInitialisesWithErrorState()
-    func test_init_defaultInitialisesWithEmptyChatPresentationModels()
-    
-    func test_reloadFeed_setsViewModelStateToError()
-}
-
-typealias ChatFeedViewModelUnitTest = XCTestCase & ChatFeedViewModelUnitTestsSpec
-
 final class ChatFeedViewModelUnitTests: ChatFeedViewModelUnitTest {}
 
 // MARK: - Test Init

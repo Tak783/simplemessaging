@@ -2,7 +2,7 @@
 //  ChatDetailViewController.swift
 //  SimpleMessaging
 //
-//  Created by Tak Mazarura on 23/09/2024.
+//  Created on 23/09/2024.
 //
 
 import UIKit
@@ -46,7 +46,7 @@ extension ChatDetailViewController {
         
         addEdgeToEdgeConstraints(forSwiftUIView: swiftUIView)
         
-        // 4. Notify the child view controller that the move is complete.
+        // 3. Notify the child view controller that the move is complete.
         hostedSwiftUIView.didMove(toParent: self)
     }
 }
