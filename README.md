@@ -1,7 +1,6 @@
-# simplemessaging
+# Simple messaging
 
-Approach 
-
+**Approach** 
 The app was built to adhere to SOLID principles, tests were written using TDD. 
 
 **Building the UI**
