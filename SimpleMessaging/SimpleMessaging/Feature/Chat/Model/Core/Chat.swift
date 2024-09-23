@@ -11,7 +11,7 @@ struct Chat: Codable {
     let id: String
     let name: String
     let lastUpdated: Date
-    let messages: [Message]
+    var messages: [Message]
     
     enum CodingKeys: String, CodingKey {
         case id

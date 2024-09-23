@@ -25,19 +25,29 @@ final class ChatMessagePresentationModel: Identifiable {
 
 final class ChatDetailViewModel: ObservableObject {
     @Published var messagePresentationModels: [ChatMessagePresentationModel]
+    @Published var title: String
     
     private var chat: Chat
     
     init(chat: Chat) {
         self.chat = chat
-        self.messagePresentationModels =  Self.presentaionModels(chat.messages)
+        self.title = chat.name
+        self.messagePresentationModels = Self.presentaionModels(chat.messages)
     }
 }
 
 // MARK: - ChatDetailViewModelling
 extension ChatDetailViewModel: ChatDetailViewModelling {
     func sendMessage(withText messageText: String) {
-        
+        let message = Message(
+            id: UUID().uuidString,
+            text: messageText,
+            lastUpdated: .now
+        )
+        chat.messages.append(message)
+        messagePresentationModels = Self.presentaionModels(
+            chat.messages
+        )
     }
 }
     
@@ -46,13 +56,14 @@ extension ChatDetailViewModel {
     private static func presentaionModels(
         _ messages: [Message]
     ) -> [ChatMessagePresentationModel] {
-        messages.map { message in
+        let sortedMessages = messages.sorted {
+            $0.lastUpdated < $1.lastUpdated
+        }
+        return sortedMessages.map { message in
             ChatMessagePresentationModel(
                 message: message,
                 dateFormatter: .mediumUTCDateTimeFormatter
             )
-        }.sorted {
-            $0.lastUpdated < $1.lastUpdated
         }
     }
 }
