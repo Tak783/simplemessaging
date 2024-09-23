@@ -34,6 +34,17 @@ extension ChatFeedViewModel: ChatFeedViewModelling {
             await loadFeed()
         }
     }
+
+    func chat(atIndexPath indexPath: IndexPath) -> Chat? {
+        guard chatPresentationModels.indices.contains(indexPath.row) else {
+            return nil
+        }
+        let presentationModel = chatPresentationModels[indexPath.row]
+        guard let index = chats.firstIndex(where: { $0.id == presentationModel.id }) else {
+            return nil
+        }
+        return chats[index]
+    }
 }
 
 // MARK: - Load Feed State Helpers
@@ -53,9 +64,10 @@ extension ChatFeedViewModel {
     private func didSuccesfullyLoadChats(withChats chats: [Chat]) {
         let dateFormatter = DateFormatter.dayDateTimeCurrentLocaleDateFormatter
         DispatchQueue.performOnMainThread {
-            self.chatPresentationModels = chats.map({ chat in
+            self.chats = chats.sorted { $0.lastUpdated > $1.lastUpdated }
+            self.chatPresentationModels = self.chats.map { chat in
                 ChatPresentationModel(chat: chat, dateFormatter: dateFormatter)
-            })
+            }
             self.updateState(toState: .loaded)
         }
     }

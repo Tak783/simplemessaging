@@ -16,4 +16,5 @@ protocol ChatFeedViewModelling {
     var onFeedStateChange: Observer<ChatFeedViewModelState>? { get set}
     
     func reloadFeed()
+    func chat(atIndexPath indexPath: IndexPath) -> Chat?
 }

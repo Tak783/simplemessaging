@@ -2,7 +2,7 @@
 //  ChatFeedTableViewCellUnitTests.swift
 //  SimpleMessagingTests
 //
-//  Created by Tak Mazarura on 23/09/2024.
+//  Created by  on 23/09/2024.
 //
 
 import Foundation

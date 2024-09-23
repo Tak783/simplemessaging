@@ -94,5 +94,22 @@ extension ChatFeedViewController: UITableViewDataSource {
 extension ChatFeedViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        
+        guard let chat = chatFeedViewModel.chat(
+            atIndexPath: indexPath
+        ) else {
+            return
+        }
+        navigateToChatDetail(forChat: chat)
+    }
+}
+
+// MARK: - Navigation
+extension ChatFeedViewController {
+    func navigateToChatDetail(forChat chat: Chat) {
+        let chatDetailViewModel = ChatDetailViewModel(chat: chat)
+        let chatDetailViewController = ChatDetailViewController()
+        chatDetailViewController.chatDetailViewModel = chatDetailViewModel
+        navigationController?.pushViewController(chatDetailViewController, animated: true)
     }
 }

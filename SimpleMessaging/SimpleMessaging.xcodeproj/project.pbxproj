@@ -41,6 +41,12 @@
 		8BD0DA1B2CA166E300A4F41D /* ChatFeedTableViewCell+DSLHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD0DA1A2CA166E300A4F41D /* ChatFeedTableViewCell+DSLHelpers.swift */; };
 		8BD0DA1E2CA1672500A4F41D /* UIView+FindChildView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD0DA1D2CA1672500A4F41D /* UIView+FindChildView.swift */; };
 		8BD0DA212CA1674000A4F41D /* ChatFeedTableViewCellUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD0DA202CA1674000A4F41D /* ChatFeedTableViewCellUnitTests.swift */; };
+		8BD0DA242CA176E900A4F41D /* ChatDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD0DA232CA176E900A4F41D /* ChatDetailView.swift */; };
+		8BD0DA262CA176F300A4F41D /* HostedChatDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD0DA252CA176F300A4F41D /* HostedChatDetailView.swift */; };
+		8BD0DA282CA1771B00A4F41D /* ChatDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD0DA272CA1771B00A4F41D /* ChatDetailViewController.swift */; };
+		8BD0DA2A2CA1793100A4F41D /* SwiftUIViewHostingUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD0DA292CA1793100A4F41D /* SwiftUIViewHostingUIViewController.swift */; };
+		8BD0DA2C2CA1799000A4F41D /* UIViewController+SwiftUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD0DA2B2CA1799000A4F41D /* UIViewController+SwiftUI.swift */; };
+		8BD0DA2E2CA179DE00A4F41D /* ChatDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD0DA2D2CA179DE00A4F41D /* ChatDetailViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -96,6 +102,12 @@
 		8BD0DA1A2CA166E300A4F41D /* ChatFeedTableViewCell+DSLHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ChatFeedTableViewCell+DSLHelpers.swift"; sourceTree = "<group>"; };
 		8BD0DA1D2CA1672500A4F41D /* UIView+FindChildView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+FindChildView.swift"; sourceTree = "<group>"; };
 		8BD0DA202CA1674000A4F41D /* ChatFeedTableViewCellUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatFeedTableViewCellUnitTests.swift; sourceTree = "<group>"; };
+		8BD0DA232CA176E900A4F41D /* ChatDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatDetailView.swift; sourceTree = "<group>"; };
+		8BD0DA252CA176F300A4F41D /* HostedChatDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostedChatDetailView.swift; sourceTree = "<group>"; };
+		8BD0DA272CA1771B00A4F41D /* ChatDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatDetailViewController.swift; sourceTree = "<group>"; };
+		8BD0DA292CA1793100A4F41D /* SwiftUIViewHostingUIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIViewHostingUIViewController.swift; sourceTree = "<group>"; };
+		8BD0DA2B2CA1799000A4F41D /* UIViewController+SwiftUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+SwiftUI.swift"; sourceTree = "<group>"; };
+		8BD0DA2D2CA179DE00A4F41D /* ChatDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatDetailViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -188,6 +200,7 @@
 		8BD0D9C22C9F507C00A4F41D /* View Model */ = {
 			isa = PBXGroup;
 			children = (
+				8BD0DA222CA176D600A4F41D /* Detail */,
 				8BD0D9E32C9F55E000A4F41D /* Feed */,
 			);
 			path = "View Model";
@@ -215,6 +228,8 @@
 			children = (
 				8BD0DA002C9F615E00A4F41D /* Storyboard */,
 				8BD0D99A2C9F4E6600A4F41D /* Assets.xcassets */,
+				8BD0DA292CA1793100A4F41D /* SwiftUIViewHostingUIViewController.swift */,
+				8BD0DA2B2CA1799000A4F41D /* UIViewController+SwiftUI.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -353,8 +368,8 @@
 		8BD0D9FC2C9F60A600A4F41D /* Chat */ = {
 			isa = PBXGroup;
 			children = (
-				8BD0D9C72C9F50E400A4F41D /* Model */,
 				8BD0D9C62C9F50E000A4F41D /* Presentation */,
+				8BD0D9C72C9F50E400A4F41D /* Model */,
 				8BD0D9CE2C9F51F100A4F41D /* Service */,
 				8BD0D9C22C9F507C00A4F41D /* View Model */,
 			);
@@ -427,6 +442,9 @@
 		8BD0DA182CA1663F00A4F41D /* Detail */ = {
 			isa = PBXGroup;
 			children = (
+				8BD0DA232CA176E900A4F41D /* ChatDetailView.swift */,
+				8BD0DA252CA176F300A4F41D /* HostedChatDetailView.swift */,
+				8BD0DA272CA1771B00A4F41D /* ChatDetailViewController.swift */,
 			);
 			path = Detail;
 			sourceTree = "<group>";
@@ -453,6 +471,14 @@
 				8BD0DA202CA1674000A4F41D /* ChatFeedTableViewCellUnitTests.swift */,
 			);
 			path = Presentation;
+			sourceTree = "<group>";
+		};
+		8BD0DA222CA176D600A4F41D /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				8BD0DA2D2CA179DE00A4F41D /* ChatDetailViewModel.swift */,
+			);
+			path = Detail;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -596,16 +622,22 @@
 			files = (
 				8BD0DA042C9F618300A4F41D /* Storyboarded+ViewController.swift in Sources */,
 				8BD0D9F82C9F604400A4F41D /* ChatFeedViewModelling.swift in Sources */,
+				8BD0DA2A2CA1793100A4F41D /* SwiftUIViewHostingUIViewController.swift in Sources */,
 				8BD0D9FB2C9F605D00A4F41D /* ChatFeedViewModelState.swift in Sources */,
 				8BD0DA132CA160D900A4F41D /* ChatPresentationModelling.swift in Sources */,
 				8BD0DA152CA160E100A4F41D /* ChatPresentationModel.swift in Sources */,
 				8BD0D9D72C9F533E00A4F41D /* ChatServiceable.swift in Sources */,
+				8BD0DA2C2CA1799000A4F41D /* UIViewController+SwiftUI.swift in Sources */,
 				8BD0D9E52C9F560700A4F41D /* ChatFeedViewModel.swift in Sources */,
 				8BD0D9C92C9F510D00A4F41D /* Chat.swift in Sources */,
+				8BD0DA282CA1771B00A4F41D /* ChatDetailViewController.swift in Sources */,
 				8BD0DA172CA1613B00A4F41D /* ChatFeedCellViewable.swift in Sources */,
 				8BD0D9CD2C9F51BB00A4F41D /* Message.swift in Sources */,
+				8BD0DA262CA176F300A4F41D /* HostedChatDetailView.swift in Sources */,
 				8BD0DA0C2CA15E0000A4F41D /* ChatFeedViewController.swift in Sources */,
 				8BD0DA0F2CA15F9C00A4F41D /* ChatFeedTableViewCell.swift in Sources */,
+				8BD0DA242CA176E900A4F41D /* ChatDetailView.swift in Sources */,
+				8BD0DA2E2CA179DE00A4F41D /* ChatDetailViewModel.swift in Sources */,
 				8BD0DA022C9F616A00A4F41D /* Storyboarded.swift in Sources */,
 				8BD0D9922C9F4E6400A4F41D /* AppDelegate.swift in Sources */,
 				8BD0D9942C9F4E6400A4F41D /* SceneDelegate.swift in Sources */,
