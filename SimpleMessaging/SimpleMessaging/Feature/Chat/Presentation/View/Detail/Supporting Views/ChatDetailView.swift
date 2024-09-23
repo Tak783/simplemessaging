@@ -54,6 +54,9 @@ extension ChatView {
 // MARK: - Send Message
 extension ChatView {
     private func sendMessage(_ message: String) {
-        chatDetailViewModel.sendMessage(withText: message)
+        messageText = .empty
+        chatDetailViewModel.sendMessage(
+            withText: message
+        )
     }
 }
