@@ -27,8 +27,14 @@ final class LocalJSONChatService: ChatServiceable {
             fromBundle: .main
         )
         do {
-            let decoder = JSONDecoder()
-            let chats = try decoder.decode([Chat].self, from: mockData)
+            let jsonDecoder: JSONDecoder = {
+                let decoder = JSONDecoder()
+                let dateFormatter = DateFormatter()
+                dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss"
+                decoder.dateDecodingStrategy = .formatted(dateFormatter)
+                return decoder
+            }()
+            let chats = try jsonDecoder.decode([Chat].self, from: mockData)
             return .success(chats)
         } catch {
             return .failure(error)

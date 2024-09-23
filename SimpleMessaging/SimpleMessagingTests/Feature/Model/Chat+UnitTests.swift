@@ -13,13 +13,13 @@ final class ChatUnitTests: XCTest {
         let chatOne = ChatStub.stubbedChatOne()
         let chatTwo = ChatStub.stubbedChatOne()
     
-        XCTAssertEqual(chatOne == chatOne, true)
+        XCTAssertEqual(chatOne == chatTwo, true)
     }
     
     func test_equatable_retunsFalseIfIDsAreNotTheSame() {
         let chatOne = ChatStub.stubbedChatOne()
         let chatTwo = ChatStub.stubbedChatTwo()
     
-        XCTAssertEqual(chatOne == chatOne, false)
+        XCTAssertEqual(chatOne == chatTwo, false)
     }
 }

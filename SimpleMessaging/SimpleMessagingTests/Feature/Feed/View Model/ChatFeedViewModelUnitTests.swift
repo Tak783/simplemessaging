@@ -11,9 +11,9 @@ import XCTest
 protocol ChatFeedViewModelUnitTestsSpec {
     func test_init_initialisesWithExpectedTitle()
     func test_init_defaultInitialisesWithErrorState()
-    func test_init_defaultInitialisesWithEmptyChatFeedModel()
+    func test_init_defaultInitialisesWithEmptyChatPresentationModels()
     
-    func test_loadFeed_setsViewModelStateToLoading()
+    func test_reloadFeed_setsViewModelStateToError()
 }
 
 typealias ChatFeedViewModelUnitTest = XCTestCase & ChatFeedViewModelUnitTestsSpec
@@ -35,21 +35,21 @@ extension ChatFeedViewModelUnitTests {
         XCTAssertEqual(sut.state, ChatFeedViewModelState.error)
     }
     
-    func test_init_defaultInitialisesWithEmptyChatFeedModel() {
+    func test_init_defaultInitialisesWithEmptyChatPresentationModels() {
         let sut = makeSUT()
         
-        XCTAssertEqual(sut.chats, .init())
+        XCTAssertEqual(sut.chatPresentationModels.count, .zero)
     }
 }
     
 // MARK: - Test Load Feed Init
 extension ChatFeedViewModelUnitTests {
-    func test_loadFeed_setsViewModelStateToLoading() {
+    func test_reloadFeed_setsViewModelStateToError() {
         let sut = makeSUT()
         
-        sut.loadFeed()
+        sut.reloadFeed()
         
-        XCTAssertEqual(sut.state, .loading)
+        XCTAssertEqual(sut.state, .error)
     }
 }
  

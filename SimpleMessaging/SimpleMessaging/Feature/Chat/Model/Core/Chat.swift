@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Chat: Decodable, Identifiable {
+struct Chat: Codable {
     let id: String
     let name: String
     let lastUpdated: Date

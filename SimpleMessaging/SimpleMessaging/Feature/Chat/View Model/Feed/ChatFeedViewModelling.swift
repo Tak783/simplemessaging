@@ -6,12 +6,14 @@
 //
 
 import Foundation
+import CoreFoundational
 
 protocol ChatFeedViewModelling {
     var title: String { get }
-    var chats: [Chat] { get }
+    var chatPresentationModels: [any ChatPresentationModelling] { get }
     var state: ChatFeedViewModelState { get }
-    var service: ChatServiceable { get }
     
     var onFeedStateChange: Observer<ChatFeedViewModelState>? { get set}
+    
+    func reloadFeed()
 }
