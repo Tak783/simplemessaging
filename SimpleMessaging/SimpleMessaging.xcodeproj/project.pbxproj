@@ -19,7 +19,6 @@
 		8BD0D9D42C9F52AF00A4F41D /* LocalJSONChatService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD0D9D32C9F52AF00A4F41D /* LocalJSONChatService.swift */; };
 		8BD0D9D72C9F533E00A4F41D /* ChatServiceable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD0D9D62C9F533E00A4F41D /* ChatServiceable.swift */; };
 		8BD0D9DC2C9F542700A4F41D /* CoreNetworking in Frameworks */ = {isa = PBXBuildFile; productRef = 8BD0D9DB2C9F542700A4F41D /* CoreNetworking */; };
-		8BD0D9DE2C9F542B00A4F41D /* CoreFoundational in Frameworks */ = {isa = PBXBuildFile; productRef = 8BD0D9DD2C9F542B00A4F41D /* CoreFoundational */; };
 		8BD0D9E22C9F543500A4F41D /* CoreTesting in Frameworks */ = {isa = PBXBuildFile; productRef = 8BD0D9E12C9F543500A4F41D /* CoreTesting */; };
 		8BD0D9E52C9F560700A4F41D /* ChatFeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD0D9E42C9F560700A4F41D /* ChatFeedViewModel.swift */; };
 		8BD0D9EA2C9F562D00A4F41D /* ChatFeedViewModelUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD0D9E92C9F562D00A4F41D /* ChatFeedViewModelUnitTests.swift */; };
@@ -48,6 +47,7 @@
 		8BD0DA2E2CA179DE00A4F41D /* ChatDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD0DA2D2CA179DE00A4F41D /* ChatDetailViewModel.swift */; };
 		8BD0DA312CA1820500A4F41D /* ChatInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD0DA302CA1820500A4F41D /* ChatInputView.swift */; };
 		8BD0DA332CA1829600A4F41D /* ChatFeedViewModelUnitTestsSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD0DA322CA1829600A4F41D /* ChatFeedViewModelUnitTestsSpec.swift */; };
+		8BD0DA3B2CA2E5D200A4F41D /* CoreFoundational in Frameworks */ = {isa = PBXBuildFile; productRef = 8BD0DA3A2CA2E5D200A4F41D /* CoreFoundational */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -118,7 +118,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8BD0D9DC2C9F542700A4F41D /* CoreNetworking in Frameworks */,
-				8BD0D9DE2C9F542B00A4F41D /* CoreFoundational in Frameworks */,
+				8BD0DA3B2CA2E5D200A4F41D /* CoreFoundational in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -534,7 +534,7 @@
 			name = SimpleMessaging;
 			packageProductDependencies = (
 				8BD0D9DB2C9F542700A4F41D /* CoreNetworking */,
-				8BD0D9DD2C9F542B00A4F41D /* CoreFoundational */,
+				8BD0DA3A2CA2E5D200A4F41D /* CoreFoundational */,
 			);
 			productName = SimpleMessaging;
 			productReference = 8BD0D98E2C9F4E6400A4F41D /* SimpleMessaging.app */;
@@ -1026,13 +1026,13 @@
 			isa = XCSwiftPackageProductDependency;
 			productName = CoreNetworking;
 		};
-		8BD0D9DD2C9F542B00A4F41D /* CoreFoundational */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = CoreFoundational;
-		};
 		8BD0D9E12C9F543500A4F41D /* CoreTesting */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = CoreTesting;
+		};
+		8BD0DA3A2CA2E5D200A4F41D /* CoreFoundational */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = CoreFoundational;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
